@@ -1,4 +1,10 @@
-<person-card [contact]="person" (sharing)="onSharing($event)"></person-card>
+<person-card [contact]="person" (sharing)="onSharing($event)">
+  <div slot="item-header">
+    <p>Very cool header</p>
+    <hr/>
+  </div>
+  <p slot="item-footer">Woah nice footer for {{person.firstName}} {{person.lastName}}</p>
+</person-card>
 
 <br>
 <button (click)="changeFirstName()">Change first name</button>
